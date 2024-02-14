@@ -3,11 +3,29 @@
     </head>
     <body>
         <h1>Commit Log</h1>
+        <p>Case1 Info</p>
+        <ul>
+            <li>Name: {{ case1['name'] }}</li>
+            <li>FileName: {{ case1['fn'] }}</li>
+        </ul>
+        <p>Case2 Info</p>
+        <ul>
+            <li>Name: {{ case2['name'] }}</li>
+            <li>FileName: {{ case2['fn'] }}</li>
+        </ul>
+        <h2>Branches: New</h2>
+        {{ df_new | safe}}
 
-        <h2>Case1 Area Changes</h2>
+        <h2>Branches: Removed</h2>
+        {{ df_removed | safe}}
+
+        <h2>Branches: Changed</h2>
+        {{ df_changed | safe}}
+
+        <h2>Case1 Network Area Changes</h2>
         <img src="{{case1_area_changes}}"/>
 
-        <h2>Case2 Area Diagram</h2>
+        <h2>Case2 Network Area Diagram</h2>
         <img src="{{case2_area_changes}}"/>
 
 
