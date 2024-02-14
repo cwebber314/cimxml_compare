@@ -1,0 +1,28 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <h1>Commit Log</h1>
+
+        <h2>Case1 Area Changes</h2>
+        <img src="{{case1_area_changes}}"/>
+
+        <h2>Case2 Area Diagram</h2>
+        <img src="{{case2_area_changes}}"/>
+
+
+        <h2>Case1 Station Diagrams</h2>
+
+        {% for sc in case1_station_changes %}
+        <h3>{{ sc['substation_name'] }}</h3>
+            <img src="{{ sc['svg'] }}"/>
+        {% endfor %}
+    
+        <h2>Case2 Station Diagrams</h2>
+        {% for sc in case2_station_changes %}
+        <h3>{{ sc['substation_name'] }}</h3>
+            <img src="{{ sc['svg'] }}"/>
+        {% endfor %}
+
+    </body>
+</html>
